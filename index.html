@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <!--jQuery CDN-->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
 
     <title>Toast Notifications</title>
 </head>
+
 <body>
-    <!--toast notification JS-->
-  <script src='./js/xl-toast.js'></script>
+
+    <center class="text-center">
+
+<h1>Refresh to see Toast again, instructions included in repository</h1>
+
+
+    </center>
+    <!--link to toast notification JS-->
+    <script src='./js/toast.js'></script>
 </body>
 
 <script>
     $(document).ready(function () {
-      setTimeout(function () {
-        $.toast({
-          title: 'I am a TOAST notification',
-          duration: 6000,
-          width: 'auto',
-          height: '28px',
-          backgroundColor: 'blue',
-          textColor: 'white',
-          lineheight: '28px',
-          position: 'middle'
-        });
-      }, 100);
+        //settimeout function, delays notification, amount of time to delay at the end of the code (1000 = 1 second)
+        setTimeout(function () {
+            $.toast({
+                //info displayed, can use href for linkable toast
+                title: 'I am a TOAST notification',
+                //how long toast stays on the screen
+                duration: 6000,
+                //width of notification
+                width: 'auto',
+                //height of notification
+                height: '28px',
+                //background color
+                backgroundColor: 'blue',
+                //text color
+                textColor: 'white',
+                //value of line height
+                lineheight: '1.6',
+                //position, top, middle, bottom, all customizable in JS
+                position: 'middle'
+            });
+            //setTimeout delay time
+        }, 100);
     });
-  </script>
+</script>
 
 
 

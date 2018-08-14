@@ -1,11 +1,10 @@
 $.extend({
 
 	toast: function (obj) {
-
-
 		if ($("#toast-div").length) {
 			return;
 		}
+		
 		var title = obj.title;
 		var showTime = obj.duration || 2000;
 		var width = obj.width || "auto";
@@ -15,6 +14,7 @@ $.extend({
 		var textColor = obj.textColor || '#fff';
 		var flag = obj.flag || true;
 		var lineheight = obj.lineheight || height;
+
 		if (position == 'bottom') {
 			position = "bottom: 50px;";
 		} else if (position == 'middle') {
